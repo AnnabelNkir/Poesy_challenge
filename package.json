@@ -1,18 +1,24 @@
 {
   "name": "react-hooks-poesy-code-challenge",
+  "homepage": "https://annabelnkir.github.io/Poesy_challenge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1"
+    "react-scripts": "^2.1.3"
   },
   "devDependencies": {
-    "json-server": "^0.15.1"
+    "gh-pages": "^4.0.0",
+    "json-server": "^0.17.0"
   },
   "scripts": {
     "start": "PORT=8000 react-scripts start",
-    "server": "json-server --watch db.json -p 8004"
+    "server": "json-server --watch db.json -p 8004",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
